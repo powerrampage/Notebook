@@ -1,0 +1,24 @@
+@import "./variables";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%
+}
+
+@layer components {
+  .icon {
+    @apply select-none inline-block text-inherit box-content;
+  }
+
+  .icon[data-axis*="x"] {
+    @apply w-[1em];
+  }
+
+  .icon[data-axis*="y"] {
+    @apply h-[1em];
+  }
+}

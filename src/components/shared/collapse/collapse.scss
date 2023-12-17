@@ -1,0 +1,10 @@
+@import "@/assets/styles";
+
+.collapse-heading {
+  &[data-open="true"] {
+    background: $primary-light;
+    * {
+      color: #222;
+    }
+  }
+}
