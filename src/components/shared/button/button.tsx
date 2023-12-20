@@ -1,10 +1,11 @@
+"use client";
 import { extendVariants, Button as NextButton } from "@nextui-org/react";
 
 export const Button = extendVariants(NextButton, {
   variants: {
     color: {
-      primary: "text-[#fff] bg-[#00AAA1]",
-      secondary: "text-[#666] bg-[#fff] border border-[#999]",
+      primary: "text-white bg-primary",
+      secondary: "text-[#666] bg-white border border-secondary",
     },
     radius: {
       lg: "rounded",

@@ -7,6 +7,7 @@ import { Footer, Header } from "@/components";
 const notoSans = Noto_Sans({
   subsets: ["latin", "cyrillic"],
   weight: ["400", "600", "700"],
+  display: "optional",
 });
 
 export const metadata: Metadata = {
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={notoSans.className}>
         <Providers>
           <Header />

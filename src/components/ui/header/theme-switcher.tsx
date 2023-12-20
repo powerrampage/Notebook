@@ -20,21 +20,23 @@ const ThemeSwitcher = () => {
   return (
     <ButtonGroup>
       <Button
+        size="sm"
+        aria-label="switch to light"
         className={clsx(
           "!p-2 min-w-fit h-fit bg-transparent text-primary",
           theme === "light" && "!bg-primary text-white"
         )}
-        size="sm"
         onClick={() => setTheme("light")}
       >
         <Sun size={20} />
       </Button>
       <Button
+        size="sm"
+        aria-label="switch to dark"
         className={clsx(
           "!p-2 min-w-fit h-fit bg-transparent text-primary",
           theme === "dark" && "!bg-primary text-white"
         )}
-        size="sm"
         onClick={() => setTheme("dark")}
       >
         <Moon size={20} />
