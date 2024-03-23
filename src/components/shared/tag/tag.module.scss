@@ -1,0 +1,7 @@
+.tag {
+  @apply text-[15px] text-[#666] capitalize border  border-solid border-secondary rounded-[4px] py-[10px] px-[20px];
+
+  &Active {
+    @apply text-white bg-primary border-primary;
+  }
+}

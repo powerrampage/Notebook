@@ -5,11 +5,11 @@ import {
   NavbarContent,
   NavbarItem,
 } from "@nextui-org/react";
-import { Button } from "@/components";
 import Link from "next/link";
 import Navigation from "./navigation";
 import ThemeSwitcher from "./theme-switcher";
 import Image from "next/image";
+import UserProfile from "./user-profile";
 
 export const Header: FC = () => {
   return (
@@ -22,14 +22,7 @@ export const Header: FC = () => {
         <Image src="/logo.svg" alt="image" priority width={119} height={27} />
       </NavbarBrand>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
+        <UserProfile />
         <NavbarItem>
           <ThemeSwitcher />
         </NavbarItem>

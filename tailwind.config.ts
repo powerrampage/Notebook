@@ -11,11 +11,14 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#00aaa1",
-        secondary: "#999",
-        dark: "#333",
         "primary-light": "#dff1f0",
+        fog: "#f2f8f7",
+        white: "#fff",
+        dark: "#333",
+        darker: "#222",
         "dark-bg": "#0f172a",
         gray: "#555",
+        secondary: "#999",
       },
     },
   },

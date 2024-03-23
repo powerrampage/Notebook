@@ -1,0 +1,12 @@
+.title,
+.mark {
+  @apply text-xl font-semibold capitalize;
+}
+
+.title {
+  @apply text-darker;
+}
+
+.mark {
+  @apply text-white bg-primary px-1;
+}

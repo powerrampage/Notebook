@@ -7,7 +7,7 @@ import { Footer, Header } from "@/components";
 const notoSans = Noto_Sans({
   subsets: ["latin", "cyrillic"],
   weight: ["400", "600", "700"],
-  display: "optional",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body className={notoSans.className}>
         <Providers>
           <Header />
-          <main className="flex-auto bg-slate-100">{children}</main>
+          <main className="flex-auto bg-fog">{children}</main>
           <Footer />
         </Providers>
       </body>
