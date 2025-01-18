@@ -33,7 +33,7 @@ interface Post {
 const mockData: Post[] = [
   {
     id: 1,
-    title: "Design is the Mix of emotions",
+    title: "Design 2 is the Mix of emotions",
     categories: ["Travel"],
     description:
       "Did you come here for something in particular or just general Riker-bashing? And blowing into",

@@ -17,7 +17,7 @@ model UserRole {
 }
 
 model User {
-  id             Int       @id @default(autoincrement())
+  id             String    @id @default(uuid())
   username       String    @unique
   firstName      String
   lastName       String
@@ -30,16 +30,16 @@ model User {
 }
 
 model Post {
-  id          Int       @id @default(autoincrement())
+  id          String     @id @default(uuid())
   title       String
   description String
   categories  String[]
-  author      User      @relation(fields: [authorId], references: [id])
-  authorId    Int
-  createdAt    DateTime  @default(now())
-  updatedAt    DateTime  @default(now()) @updatedAt
+  author      User       @relation(fields: [authorId], references: [id])
+  authorId    String
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @default(now()) @updatedAt
   image       String?
-  Category    Category? @relation(fields: [categoryId], references: [id])
+  Category    Category?  @relation(fields: [categoryId], references: [id])
   categoryId  Int?
   Comment     Comment[]
 }
@@ -54,8 +54,8 @@ model Comment {
   id        Int      @id @default(autoincrement())
   content   String
   post      Post     @relation(fields: [postId], references: [id])
-  postId    Int
+  postId    String
   author    User     @relation(fields: [authorId], references: [id])
-  authorId  Int
+  authorId  String
   createdAt DateTime @default(now())
 }

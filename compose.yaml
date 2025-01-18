@@ -1,0 +1,9 @@
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: power8484
+      POSTGRES_DB: notebook
+    ports:
+      - "5432:5432"
